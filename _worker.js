@@ -5,8 +5,8 @@ let mytoken= ['auto'];//快速订阅访问入口, 留空则不启动快速订阅
 
 // 设置优选地址，不带端口号默认443，TLS订阅生成
 let addresses = [
-	'icook.tw:2053#官方优选域名',
-	'cloudflare.cfgo.cc#优选官方线路',
+	'cdn.cf.059527.xyz:2087#t.me/Tg_idc',
+	'cdn.aesin.ltd#CF_CDN',
 ];
 
 // 设置优选地址api接口
@@ -17,9 +17,9 @@ let addressesapi = [
 
 // 设置优选地址，不带端口号默认80，noTLS订阅生成
 let addressesnotls = [
-	'www.visa.com.sg#官方优选域名',
-	'www.wto.org:8080#官方优选域名',
-	'www.who.int:8880#官方优选域名',
+	'visa.et:8443#VISA',
+	'www.wto.org:8080#WTO',
+	'www.who.int:8880#WHO',
 ];
 
 // 设置优选noTLS地址api接口
@@ -57,15 +57,15 @@ let 协议类型 = 'VLESS';
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
 let total = 99;//PB
-//let timestamp = now;
-let timestamp = 4102329600000;//2099-12-31
+let timestamp = now;
+// let timestamp = 4102329600000;//2099-12-31
 const regex = /^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\[.*\]):?(\d+)?#?(.*)?$/;
 // 虚假uuid和hostname，用于发送给配置生成服务
 let fakeUserID ;
 let fakeHostName ;
 let httpsPorts = ["2053","2083","2087","2096","8443"];
-let effectiveTime = 7;//有效时间 单位:天
-let updateTime = 3;//更新时间
+let effectiveTime = 86400;//有效时间 单位:天
+let updateTime = 365;//更新时间
 async function sendMessage(type, ip, add_data = "") {
 	if ( BotToken !== '' && ChatID !== ''){
 		let msg = "";
